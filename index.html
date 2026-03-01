@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinta Colores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PINTA COLORES</h1>
+      <p>Genera paletas de colores al instante</p>
+      <button class="btn" onclick="generatePalette()">🎲 Generar paleta</button>
+    </header>
+
+    <main>
+      <!-- Paleta actual -->
+
+      <section class="section">
+        <h2>Paleta actual</h2>
+        <p class="hint">Haz clic en un color para copiarlo</p>
+        <div class="palette" id="palette"></div>
+        <button class="btn btn-outline" onclick="savePalette()">
+          ⭐ Guardar paleta
+        </button>
+      </section>
+
+      <!-- Favoritos -->
+      <section class="section">
+        <h2>⭐ Paletas guardadas</h2>
+        <div id="favorites">
+          <p class="empty">Aún no tienes paletas guardadas.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toast notificación -->
+    <div class="toast" id="toast">¡Color copiado!</div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
